@@ -1,0 +1,131 @@
+.pay-buttons {
+	height: 45px;
+}
+
+.pay-buttons .pay, label {
+
+	transition: all 0.25s;
+
+	display: block;
+    margin: auto;
+
+	height: 45px;
+
+	margin-bottom: 10px;
+
+	font-size: 22px;
+	font-weight: 600;
+
+    box-shadow: inset .5px 1px 0 rgba(255,255,255,0.5), 0 1px 5px rgba(0,0,0,0.5);
+
+    border-radius: 5px;
+
+    text-align: center;
+
+    border-style: none;
+
+}
+
+.pay-buttons {
+
+	.pay {
+		width: 220px;
+		float: left;
+
+		color: white;
+    	text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+
+		//Gradient
+	    background: $blue-color-dark;
+		background: -moz-linear-gradient(top,  $blue-color-dark 0%, $blue-color-light 100%);
+		background: -webkit-linear-gradient(top,  $blue-color-dark 0%, $blue-color-light 100%);
+		background: linear-gradient(to bottom,  $blue-color-dark 0%, $blue-color-light 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$blue-color-dark', endColorstr='$blue-color-light',GradientType=0 );
+
+		cursor:pointer;
+
+		&:hover {
+			background: lighten($blue-color-dark, 5%);
+			background: -moz-linear-gradient(top,  lighten($blue-color-dark, 5%) 0%, lighten($blue-color-light, 5%) 100%);
+			background: -webkit-linear-gradient(top,  lighten($blue-color-dark, 5%) 0%, lighten($blue-color-light, 5%) 100%);
+			background: linear-gradient(to bottom,  lighten($blue-color-dark, 5%) 0%, lighten($blue-color-light, 5%) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='lighten($blue-color-dark, 5%)', endColorstr='lighten($blue-color-light, 5%)',GradientType=0 );
+		}
+
+		&:focus {
+			outline: none;
+			border-style: solid;
+			border-color: white;
+			border-width: 1px;
+		}
+	}
+
+	label {
+		float: right;
+		width: 100px;
+
+		margin-left: 10px;
+
+		color: $brand-color;
+		background: $darker-background;
+
+		&:hover {
+			background: lighten($darker-background, 3%);
+		}
+	}
+	
+}
+
+.pay-buttons #custom-amount {
+	box-sizing: border-box;
+	margin-left: 10px;
+
+	float: right;
+	width: 100px;
+	height: 45px;
+
+	font-size: 22px;
+	font-weight: lighter;
+
+    border-radius: 5px;
+
+    text-align: center;
+
+    border-style: none;
+
+    color: darken($brand-color, 20%);
+	background: $darker-background;
+
+	&:hover, &:focus {
+		background: darken($darker-background, 3%);
+	}
+
+	outline: none;
+
+	&.active {
+		box-shadow: inset 0 2px 5px rgba(0,0,0,0.4);
+		color: $brand-color;
+		border-style: solid;
+		border-width: 1px;
+	}
+}
+
+.pay-buttons label span {
+    display: block;
+    height: 100%;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.pay-buttons label input {
+    position:absolute;
+    left: -50px;
+}
+
+.pay-buttons input:checked + span {
+    background-color: $brand-color-light;
+    color: $button-background-color;
+
+    box-shadow: inset .5px 1px 0 rgba(255,255,255,0.5);
+}

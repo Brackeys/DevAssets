@@ -1,0 +1,64 @@
+<section class="pay-buttons" data-toggle="button">
+	<form name="Pay" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+		<input type="hidden" name="cmd" value="_xclick">
+		<input type="hidden" name="business" value="at@brackeys.com">
+		<input type="hidden" name="currency_code" value="USD">
+		<input type="hidden" name="item_name" value="{{page.title}}">
+		<input id="amount" type="hidden" name="amount" value="2.0">
+		<input id="pay-button" class="pay" type="submit" value="Pay what you want!">
+	</form>
+
+	<input onchange="updatePayAmount()" id="custom-amount" type="number" name="amount" value="20.0" min="0">
+
+	<label class="btn btn-primary"><input type="radio" value="custom" name="options" id="option4" autocomplete="off" onclick="updatePayAmount()"><span>Custom</span>
+	</label>
+
+	<label class="btn btn-primary"><input type="radio" value="10.0" name="options" id="option3" autocomplete="off" onclick="updatePayAmount()"><span>$10</span>
+	</label>
+
+	<label class="btn btn-primary active"><input type="radio" value="5.0" name="options" id="option2" autocomplete="off" onclick="updatePayAmount()" checked><span>$5</span>
+	</label>
+
+	<label class="btn btn-primary"><input type="radio" value="2.0" name="options" id="option1" autocomplete="off" onclick="updatePayAmount()"><span>$2</span>
+	</label>
+
+</section>
+
+<script>
+
+	function updatePayAmount() {
+		var buttons = document.getElementsByTagName("input");
+		for (var i = 0; i < buttons.length; i++) { 
+			if ( buttons[i].checked ) {
+
+				var payButton = document.getElementById("pay-button");
+				var customAmountInput = document.getElementById("custom-amount");
+				var placeToPutAmount = document.getElementById("amount");
+
+				var price;
+
+				if (buttons[i].value == "custom") {
+					price = customAmountInput.value;
+
+					customAmountInput.className = "active";
+
+				} else {
+					price = buttons[i].value;
+					
+					customAmountInput.className = "";
+				}
+
+				if (price == 0) {
+					payButton.value = "Grab it for free!";
+				}
+				else {
+					payButton.value = "Pay what you want!";
+				}
+
+				placeToPutAmount.value = price;
+
+			}
+		}
+	}
+
+</script>

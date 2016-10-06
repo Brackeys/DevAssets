@@ -1,0 +1,96 @@
+.site-header {
+	padding: 45px 40px;
+	height: 130px;
+	box-sizing: border-box;
+	border: none !important;
+}
+
+
+.site-header .header-limiter {
+	max-width: $content-width;
+	text-align: center;
+	margin: 0 auto;
+}
+
+/* Logo */
+
+.site-header .header-limiter img {
+	float: left;
+	line-height: 70px;
+	margin-top: 15px;
+}
+
+
+/* The header links */
+
+.site-header .header-limiter a {
+	color: #ffffff;
+}
+
+.site-header .header-limiter nav {
+	line-height: 70px;
+	float: right;
+}
+
+.site-header .header-limiter nav a {
+
+    border-radius: 5px;
+    font-weight: 900;
+    font-size: 14px;
+    padding: 0.5em 1em;
+    text-shadow: none;
+    text-transform: uppercase;
+    transition: all 0.25s;
+
+    margin-right: 5px;
+
+    color: $brand-color;
+
+	&:hover {
+		background-color: $button-background-color;
+		box-shadow: inset 0 1px 3px rgba(0,0,0,0.5),0 1px 0 rgba(255,255,255,0.1);
+		text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	}
+
+	&.current {
+		background-color: $brand-color-light;
+	    color: $button-text-color;
+	    box-shadow: inset 0 1px 0 rgba(255,255,255,0.5),0 1px 5px rgba(0,0,0,0.5);
+	    text-shadow: 0 1px 0 rgba(255,255,255,0.3)
+	}
+
+}
+
+/* Making the header responsive */
+
+@media all and (max-width: 700px)  {
+	.site-header {
+		padding: 45px 0;
+		height: 140px;
+	}
+
+	.site-header .header-limiter img {
+		float: none;
+		margin: -8px 0 10px;
+		text-align: center;
+		font-size: 24px;
+		line-height: 1;
+	}
+
+	.site-header .header-limiter nav {
+		line-height: 1;
+		float: none !important;
+	}
+
+	.site-header .header-limiter nav a {
+		font-size: 13px;
+	}
+}
+
+
+/* For the headers to look good, be sure to reset the margin and padding of the body */
+
+body {
+	margin: none;
+	padding: none;
+}

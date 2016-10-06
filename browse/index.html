@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<link rel="stylesheet" type="text/css" href="{{site.github.url}}/css/browse.css">
+
+<div class="browse">
+
+	{% include featured-two-thirds.html %}
+
+	{% include featured-one-third.html %}
+
+	{% include featured-banner.html %}
+
+	{% for asset in site.assets %}
+	  {% include one-third-asset.html asset=asset %}
+	{% endfor %}
+
+
+</div>

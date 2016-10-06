@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<div class="home">
+
+	{% include pay-what-you-want.html %}
+
+	<section>
+		{% include featured-one-third.html %}
+		{% include featured-two-thirds.html %}
+	</section>
+
+	{% include three-sections.html %}
+
+	<section>
+		{% include featured-banner.html %}
+
+		{% for asset in site.assets limit:3 %}
+			{% include one-third-asset.html asset=asset %}
+		{% endfor %}
+	</section>
+
+</div>

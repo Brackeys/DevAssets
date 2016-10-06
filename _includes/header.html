@@ -1,0 +1,23 @@
+<header class="site-header">
+
+	<div class="header-limiter">
+
+		<div>
+			<a href="{{site.github.url}}/">
+			<img src="{{site.github.url}}/img/Logo.png" alt="DevAssets Logo" width="246" height="61" border="0">
+			</a>
+		</div>
+
+		<nav>
+			<a href="{{site.github.url}}/" {% if page.url == "/" %} class="current"{% endif %}>Home</a>
+			
+			<a href="{{site.github.url}}/browse/" {% if page.url == "/browse/" %} class="current"{% endif %}>Browse</a>
+
+			<a href="{{site.github.url}}/about/" {% if page.url == "/about/" %} class="current"{% endif %}>About</a>
+
+			<a href="{{site.github.url}}/guidelines/" {% if page.url == "/guidelines/" %} class="current"{% endif %}>Guidelines</a>
+		</nav>
+	</div>
+
+</header>
+

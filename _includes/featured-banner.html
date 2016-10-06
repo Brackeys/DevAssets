@@ -1,0 +1,13 @@
+{% assign featured-asset = site.assets | where:"title", site.featured-banner | first %}
+
+{% assign real-name = featured-asset.title | remove: " -" | replace: " ", "-" | downcase %}
+
+{% assign img-path = site.asset-img-path | append: real-name %}
+
+<div class="featured-banner asset">
+
+	<a href="{{site.github.url}}{{site.asset-path}}{{real-name}}/">
+		<img src="{{site.github.url}}{{img-path}}/{{featured-asset.banner-img}}" alt="{{featured-asset.title}}">
+	</a>
+
+</div>

@@ -1,0 +1,30 @@
+$base-font-family: 'Lato', sans-serif;
+$base-font-size:   16px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #ddd;
+$background-color: #333;
+$brand-color:      #ff9e21;
+$brand-color-light:#ffb821;
+
+$darker-background:#2e2e2e;
+
+$blue-color-dark:  #34c5f9;
+$blue-color-light: #21a5f5;
+
+$grey-color:       #7b7b7b;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+$button-text-color:#222;
+$button-background-color: #252525;
+
+// Width of the content area
+$content-width:    900px;
+
+$on-palm:          600px;
+$on-laptop:        800px;

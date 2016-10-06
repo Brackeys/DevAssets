@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+<link rel="stylesheet" type="text/css" href="{{site.github.url}}/css/asset-view.css">
+
+{% assign img-folder = page.title | remove: " -" | replace: " ", "-" | downcase %}
+
+{% assign img-path = site.asset-img-path | append: img-folder %}
+
+<section>
+
+	<img class="banner" src="{{site.github.url}}{{img-path}}/{{page.banner-img}}" alt="{{page.title}} Banner" border="0">
+
+</section>
+
+<section>
+	<h1>{{ page.title }}</h1>
+</section>
+
+{% include pay-buttons.html %}
+
+<section class="information">
+	<div class="description">
+		<p>{{ page.description }}</p>
+	</div>
+	<div class="contains">
+		<h3>Contains:</h3>
+		<ul>
+			{% for asset in page.assets %}
+			<li>{{asset}}</li>
+			{% endfor %}
+		</ul>
+	</div>
+</section>
+
+{% if page.show-video %}
+<section class="video">
+	<div class="videoWrapper">
+		<iframe width="560" height="315" src="{{page.video-url}}" frameborder="0" allowfullscreen></iframe>
+	</div>
+</section>
+{% endif %}
+
+<section class="screenshots">
+	
+	{% for screenshot in page.screenshots %}
+	<img class="screenshot" src="{{site.github.url}}{{img-path}}/{{screenshot}}" alt="{{page.title}} Screenshot" border="0">
+	{% endfor %}
+
+</section>

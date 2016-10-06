@@ -1,0 +1,30 @@
+.asset {
+	float: left;
+	margin: 3px;
+
+	box-sizing: border-box;
+
+	box-shadow: 2px 2px 20px #232323;
+
+	&:hover {
+		border-style: solid;
+		border-width: 1px;
+	}
+}
+
+.featured-banner {
+
+	width: calc(100% - 6px);
+
+	img {
+		width: 100%;
+	}
+}
+
+.featured-two-thirds {
+	width: calc(66.666% - 6px);
+}
+
+.one-third-asset {
+	width: calc(33.333% - 6px);
+}

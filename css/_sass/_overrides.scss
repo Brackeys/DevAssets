@@ -1,0 +1,55 @@
+a {
+	text-decoration: none !important;
+
+	&:visited {
+		color: $brand-color;
+	}
+
+	&:hover {
+		color: $brand-color-light;
+	}
+}
+
+.wrapper {
+	padding-left: 0;
+	padding-right: 0;
+
+	max-width: none;
+}
+
+section {
+	max-width: $content-width;
+
+	margin: auto;
+	margin-bottom: 50px;
+
+	clear: both;
+}
+
+h3 {
+	font-size: 26px;
+	font-weight: bold;
+
+	text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+h1 {
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+p {
+	font-weight: lighter;
+	font-size: 18px;
+
+	line-height: 1.5em;
+
+	margin-top: 15px;
+
+	text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+	-webkit-appearance: none; 
+	margin: 0; 
+}

@@ -1,0 +1,11 @@
+<div class="one-third-asset asset">
+	
+	{% assign real-name = include.asset.title | remove: " -" | replace: " ", "-" | downcase %}
+
+	{% assign img-path = site.asset-img-path | append: real-name %}
+
+	<a href="{{site.github.url}}{{site.asset-path}}{{real-name}}/">
+		<img src="{{site.github.url}}{{img-path}}/{{include.asset.one-third-img}}" alt="{{include.asset.title}}">
+	</a>
+
+</div>

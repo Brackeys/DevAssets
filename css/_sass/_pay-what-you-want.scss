@@ -1,0 +1,52 @@
+.pay-what-you-want {
+    background-color: #3F1F1F;
+    color: #fff;
+    box-shadow: inset 0 3px 10px rgba(0,0,0,0.4);
+    height: 212px;
+
+    width: 100%;
+    max-width: none;
+
+    margin-bottom: 60px;
+}
+
+.pay-what-you-want .content {
+    padding: 0;
+}
+
+.pay-what-you-want h1 {
+    font-size: 60px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+    text-align: center;
+
+    &.primary {
+   		text-transform: uppercase;
+   		letter-spacing: 10px;
+   		font-weight: bold;
+
+        line-height: 60px;
+
+   		padding-top: 35px;
+    }
+
+    &.secondary {
+    	font-weight: lighter;
+        line-height: 30px;
+    }
+}
+
+.pay-what-you-want .button {
+	display: block;
+    margin: auto;
+	margin-top: 40px;
+	margin-bottom: 40px;
+    width: 208px;
+}
+
+@media (max-width: 800px) {
+
+	.pay-what-you-want h1 {
+   		font-size: 40px !important;
+    }    
+
+}

@@ -1,0 +1,44 @@
+footer {
+	float: left;
+    width: 100%;
+    clear: both;
+
+    height: 150px;
+
+	background-color: #212121;
+    font-size: 16px;
+    padding-bottom: 5px;
+    color: #c0c0c0;
+}
+
+footer .wrapper {
+	max-width: $content-width;
+}
+
+footer .first-third, .second-third, .third-third {
+	width: 33.333%;
+	float: left;
+
+	padding: 30px 0px 0px 0px;
+
+	box-sizing: border-box;
+
+	p {
+		color: #7b7b7b;
+	}
+}
+
+footer .second-third {
+	text-align: center;
+}
+
+footer .third-third {
+	//padding-top: 50px;
+
+	text-align: right;
+	text-transform: uppercase;
+
+	a {
+		font-size: 24px;
+	}
+}
