@@ -1,5 +1,7 @@
-source "https://rubygems.org"
 ruby RUBY_VERSION
+
+source 'http://rubygems.org'
+gem 'github-pages'
 
 # Hello! This is where you manage which Jekyll version is used to run.
 # When you want to use a different version, change it below, save the
