@@ -4,12 +4,10 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+The goal of this site is to allow anyone - no matter their budget - to download high-quality assets to use in their commercial projects.
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jekyll" %} /
-[minima](https://github.com/jekyll/minima)
+DevAssets is built on the idea of **pay what you want** pricing. That means that newer developers can get top-quality assets at a price they can afford and that the more established developers can choose to chip in to support a good cause.
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+The website is built and mantained by <a href="http://youtube.com/brackeys/" target="_blank">Brackeys</a> but the many assets on the site is created by independant artists. If you want to become part of the project feel free to [throw us an email](mailto:apply@brackeys.com).
+
+So what are you waiting for? [Start Browsing!](/browse/)
