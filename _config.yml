@@ -56,3 +56,4 @@ defaults:
       two-thirds-img: TwoThirds.jpg
       one-third-img: OneThird.jpg
       show: true
+      show-video: false

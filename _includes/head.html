@@ -17,4 +17,12 @@
 		{% include {{ script }} %}
 	{% endfor %}
 
+	{% for style in layout.style %}
+		<link rel="stylesheet" type="text/css" href="{{site.github.url}}/css/{{style}}.css">
+	{% endfor %}
+
+	{% for style in page.style %}
+		<link rel="stylesheet" type="text/css" href="{{site.github.url}}/css/{{style}}.css">
+	{% endfor %}
+
 </head>
