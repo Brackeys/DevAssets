@@ -6,3 +6,56 @@
 		<input id="amount" type="hidden" name="amount" value="2.0">
 		<input id="pay-button" class="pay" type="submit" value="Pay what you want!">
 	</form>
+
+	<input onchange="updatePayAmount()" id="custom-amount" type="number" name="amount" value="20.0" min="0">
+
+	<label class="btn btn-primary"><input type="radio" value="custom" name="options" id="4" autocomplete="off" onclick="updatePayAmount()"><span>Custom</span>
+	</label>
+
+	<label class="btn btn-primary"><input type="radio" value="10.0" name="options" id="3" autocomplete="off" onclick="updatePayAmount()"><span>$10</span>
+	</label>
+
+	<label class="btn btn-primary active"><input type="radio" value="5.0" name="options" id="2" autocomplete="off" onclick="updatePayAmount()" checked><span>$5</span>
+	</label>
+
+	<label class="btn btn-primary"><input type="radio" value="2.0" name="options" id="1" autocomplete="off" onclick="updatePayAmount()"><span>$2</span>
+	</label>
+
+<script>
+
+	function updatePayAmount() {
+		var buttons = document.getElementsByTagName("input");
+		for (var i = 0; i < buttons.length; i++) { 
+			if ( buttons[i].checked ) {
+
+				var payButton = document.getElementById("pay-button");
+				var customAmountInput = document.getElementById("custom-amount");
+				var placeToPutAmount = document.getElementById("amount");
+
+				var price;
+
+				if (buttons[i].value == "custom") {
+					price = customAmountInput.value;
+
+					customAmountInput.className = "active";
+
+				} else {
+					price = buttons[i].value;
+					
+					customAmountInput.className = "";
+				}
+
+				if (price == 0) {
+					payButton.innerHTML = "Grab it for free!";
+				}
+				else {
+					payButton.innerHTML = "Pay what you want!";
+				}
+
+				payButton.setAttribute("data-item-price", price);
+
+			}
+		}
+	}
+
+</script>
