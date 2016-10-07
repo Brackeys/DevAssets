@@ -1,6 +1,6 @@
 ---
 # Name of the pack
-title: Medieval Arena
+name: Medieval Arena
 
 # Short description of the pack
 description: "Battle it out in this beautiful high poly arena! The pack comes with both models and textures along with a Unity Package that sets everything up for you!"

@@ -1,7 +1,7 @@
 ---
 # Name of the pack
 # Must be the same as the file-name (except with spaces and capital letters: Modern Weapons = modern-weapons.md)
-title: Test Asset 02
+name: Test Asset 02
 
 # Short description of the pack
 description: "This package of five high-poly modern weapons will blow your mind (and maybe your head off). All the models are well-optimized and perfect for use in the next big standalone shooter!"

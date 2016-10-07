@@ -12,22 +12,13 @@ style:
 
 <section>
 
-	<img class="banner" src="{{site.github.url}}{{img-path}}/{{page.banner-img}}" alt="{{page.title}} Banner" border="0">
+	<img class="banner" src="{{site.github.url}}{{img-path}}/{{page.banner-img}}" alt="{{page.name}} Banner" border="0">
 
 </section>
 
 <section>
-	<h1>{{ page.title }}</h1>
+	<h1>{{ page.name }}</h1>
 </section>
-
-<button class="snipcart-add-item"
-	data-item-name="{{ page.title }}"
-	data-item-id="DAP"
-	data-item-image="http://d.gr-assets.com/books/1422538855l/23158207.jpg"
-	data-item-url="{{site.github.url}}{{page.url}}"
-	data-item-price="2">
-	Buy it for 2$
-</button>
 
 {% include pay-buttons.html %}
 

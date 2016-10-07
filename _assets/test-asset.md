@@ -1,6 +1,6 @@
 ---
 # Name of the pack
-title: Test Asset
+name: Test Asset
 
 # Short description of the pack
 description: "This package of five high-poly modern weapons will blow your mind (and maybe your head off). All the models are well-optimized and perfect for use in the next big standalone shooter!"
