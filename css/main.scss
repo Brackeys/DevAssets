@@ -22,3 +22,9 @@
 @import "three-sections";
 @import "assets";
 @import "footer";
+
+.home {
+	section {
+		max-width: $home-width;
+	}
+}

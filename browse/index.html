@@ -15,7 +15,9 @@ title: Browse
 	{% include featured-banner.html %}
 
 	{% for asset in site.assets %}
-	  {% include one-third-asset.html asset=asset %}
+		{% if asset.show %}
+			{% include one-third-asset.html asset=asset %}
+		{% endif %}
 	{% endfor %}
 
 

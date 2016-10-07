@@ -7,10 +7,14 @@
 	<title>{{page.title}} | {{site.title}}</title>
 	<meta name="description" content="{{site.description}}">
 
-
-
-	<link rel="stylesheet" href="/{{site.github.url}}css/main.css">
-	<link rel="canonical" href="http://devassets.com/">
-	<link rel="alternate" type="application/rss+xml" title="{{site.title}}" href="/{{site.github.url}}feed.xml">
+	<link rel="stylesheet" href="{{site.github.url}}/css/main.css">
+	<link rel="canonical" href="{{site.github.url}}">
+	<link rel="alternate" type="application/rss+xml" title="{{site.title}}" href="{{site.github.url}}/feed.xml">
 	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+	{% for script in layout.head %}
+		{% include {{ script }} %}
+	{% endfor %}
+
 </head>

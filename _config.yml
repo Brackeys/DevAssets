@@ -27,10 +27,13 @@ github_username:  Brackeys
 asset-img-path: /img/assets/
 asset-path: /assets/
 
+#Snipcart
+snipcart-api-key: M2RjMTc3NGUtYjNhMC00NTFlLWJjN2ItOTBkNGNkNDRjN2U2NjM2MTE0NTA4MDE5ODI4MDU5
+
 #Featured
-featured-banner: Modern Weapons
-featured-two-thirds: Modern Weapons
-featured-one-third: Modern Weapons
+featured-banner: Medieval Arena
+featured-two-thirds: Medieval Arena
+featured-one-third: Medieval Arena
 
 # Build settings
 markdown: kramdown
@@ -49,3 +52,7 @@ defaults:
       type: assets
     values:
       layout: asset-view
+      banner-img: Banner.jpg
+      two-thirds-img: TwoThirds.jpg
+      one-third-img: OneThird.jpg
+      show: true
