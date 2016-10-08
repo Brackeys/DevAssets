@@ -1,3 +1,55 @@
+<script>
+
+	function updatePayAmount() {
+		var buttons = document.getElementsByTagName("input");
+		for (var i = 0; i < buttons.length; i++) { 
+			if ( buttons[i].checked ) {
+
+				var payButton1 = document.getElementById("pay-button-1");
+				var payButton2 = document.getElementById("pay-button-2");
+				var payButton3 = document.getElementById("pay-button-3");
+				var payButton4 = document.getElementById("pay-button-4");
+				var payButton5 = document.getElementById("pay-button-5");
+				
+				if (buttons[i].id == "1") {
+					payButton1.style.display="block";
+					payButton2.style.display="none";
+					payButton3.style.display="none";
+					payButton4.style.display="none";
+					payButton5.style.display="none";
+				} else if (buttons[i].id == "2") {
+					payButton1.style.display="none";
+					payButton2.style.display="block";
+					payButton3.style.display="none";
+					payButton4.style.display="none";
+					payButton5.style.display="none";
+				} else if (buttons[i].id == "3") {
+					payButton1.style.display="none";
+					payButton2.style.display="none";
+					payButton3.style.display="block";
+					payButton4.style.display="none";
+					payButton5.style.display="none";
+				} else if (buttons[i].id == "4") {
+					payButton1.style.display="none";
+					payButton2.style.display="none";
+					payButton3.style.display="none";
+					payButton4.style.display="block";
+					payButton5.style.display="none";
+				} else {
+					payButton1.style.display="none";
+					payButton2.style.display="none";
+					payButton3.style.display="none";
+					payButton4.style.display="none";
+					payButton5.style.display="block";
+				}
+
+			}
+		}
+	}
+
+</script>
+
+
 <form name="Pay" action="https://www.paypal.com/cgi-bin/webscr" method="post">
 		<input type="hidden" name="cmd" value="_xclick">
 		<input type="hidden" name="business" value="at@brackeys.com">

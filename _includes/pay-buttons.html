@@ -5,119 +5,64 @@
 <section class="pay-buttons" data-toggle="button">
 
 	<button
-		id="pay-button-1"
+		id="pay-button"
 		class="snipcart-add-item pay"
 		data-item-name="{{page.name}}"
-		data-item-id="{{page.id}}-2"
+		data-item-id="{{page.id}}-test"
 		data-item-image="{{site.github.url}}{{img-path}}/{{page.one-third-img}}"
 		data-item-url="{{site.github.url}}{{page.url}}"
 		data-item-price="2"
-		style="display: none;">
+		data-item-custom1-name="Price"
+		data-item-custom1-options="2|5[+3.00]|10[+8.00]|20[+18.00]"
+		onclick="onAddItem()"
+		>
 		Pay what you want!
 	</button>
+
+	<script>
+	function onAddItem () {
+		Snipcart.api.items.clear();
+	}
+
+	function updatePayAmount(amount) {
+
+		var payButton = $('#pay-button');
+
+		var payButtonElement = document.getElementById( 'pay-button' );
+		var freeButtonElement = document.getElementById( 'pay-button-free' );
+
+		if (amount > 0) {
+			payButton.data('item-custom1-value', amount);
+
+			payButtonElement.style.display = 'block';
+			freeButtonElement.style.display = 'none';
+		} else {
+			payButtonElement.style.display = 'none';
+			freeButtonElement.style.display = 'block';
+		}
+	}
+	</script>
+
 	<button
-		id="pay-button-2"
-		class="snipcart-add-item pay"
-		data-item-name="{{page.name}}"
-		data-item-id="{{page.id}}-5"
-		data-item-image="{{site.github.url}}{{img-path}}/{{page.one-third-img}}"
-		data-item-url="{{site.github.url}}{{page.url}}"
-		data-item-price="5">
-		Pay what you want!
-	</button>
-	<button
-		id="pay-button-3"
-		class="snipcart-add-item pay"
-		data-item-name="{{page.name}}"
-		data-item-id="{{page.id}}-10"
-		data-item-image="{{site.github.url}}{{img-path}}/{{page.one-third-img}}"
-		data-item-url="{{site.github.url}}{{page.url}}"
-		data-item-price="10"
-		style="display: none;">
-		Pay what you want!
-	</button>
-	<button
-		id="pay-button-4"
-		class="snipcart-add-item pay"
-		data-item-name="{{page.name}}"
-		data-item-id="{{page.id}}-20"
-		data-item-image="{{site.github.url}}{{img-path}}/{{page.one-third-img}}"
-		data-item-url="{{site.github.url}}{{page.url}}"
-		data-item-price="20"
-		style="display: none;">
-		Pay what you want!
-	</button>
-	<button
-		id="pay-button-5"
+		id="pay-button-free"
 		class="pay"
 		style="display: none;">
 		Grab it for free!
 	</button>
 
-	<label class="btn btn-primary"><input type="radio" value="0.0" name="options" id="5" autocomplete="off" onclick="updatePayAmount()"><span>$0</span>
+	<label class="btn btn-primary"><input type="radio" value="0" name="options" id="5" autocomplete="off" onclick="updatePayAmount(this.value)"><span>$0</span>
 	</label>
 
-	<label class="btn btn-primary"><input type="radio" value="20.0" name="options" id="4" autocomplete="off" onclick="updatePayAmount()"><span>$20</span>
+	<label class="btn btn-primary"><input type="radio" value="20" name="options" id="4" autocomplete="off" onclick="updatePayAmount(this.value)"><span>$20</span>
 	</label>
 
-	<label class="btn btn-primary"><input type="radio" value="10.0" name="options" id="3" autocomplete="off" onclick="updatePayAmount()"><span>$10</span>
+	<label class="btn btn-primary"><input type="radio" value="10" name="options" id="3" autocomplete="off" onclick="updatePayAmount(this.value)"><span>$10</span>
 	</label>
 
-	<label class="btn btn-primary active"><input type="radio" value="5.0" name="options" id="2" autocomplete="off" onclick="updatePayAmount()" checked><span>$5</span>
+	<label class="btn btn-primary active"><input type="radio" value="5" name="options" id="2" autocomplete="off" onclick="updatePayAmount(this.value)" checked><span>$5</span>
 	</label>
 
-	<label class="btn btn-primary"><input type="radio" value="2.0" name="options" id="1" autocomplete="off" onclick="updatePayAmount()"><span>$2</span>
+	<label class="btn btn-primary"><input type="radio" value="2" name="options" id="1" autocomplete="off" onclick="updatePayAmount(this.value)"><span>$2</span>
 	</label>
 
 </section>
-
-<script>
-
-	function updatePayAmount() {
-		var buttons = document.getElementsByTagName("input");
-		for (var i = 0; i < buttons.length; i++) { 
-			if ( buttons[i].checked ) {
-
-				var payButton1 = document.getElementById("pay-button-1");
-				var payButton2 = document.getElementById("pay-button-2");
-				var payButton3 = document.getElementById("pay-button-3");
-				var payButton4 = document.getElementById("pay-button-4");
-				var payButton5 = document.getElementById("pay-button-5");
-				
-				if (buttons[i].id == "1") {
-					payButton1.style.display="block";
-					payButton2.style.display="none";
-					payButton3.style.display="none";
-					payButton4.style.display="none";
-					payButton5.style.display="none";
-				} else if (buttons[i].id == "2") {
-					payButton1.style.display="none";
-					payButton2.style.display="block";
-					payButton3.style.display="none";
-					payButton4.style.display="none";
-					payButton5.style.display="none";
-				} else if (buttons[i].id == "3") {
-					payButton1.style.display="none";
-					payButton2.style.display="none";
-					payButton3.style.display="block";
-					payButton4.style.display="none";
-					payButton5.style.display="none";
-				} else if (buttons[i].id == "4") {
-					payButton1.style.display="none";
-					payButton2.style.display="none";
-					payButton3.style.display="none";
-					payButton4.style.display="block";
-					payButton5.style.display="none";
-				} else {
-					payButton1.style.display="none";
-					payButton2.style.display="none";
-					payButton3.style.display="none";
-					payButton4.style.display="none";
-					payButton5.style.display="block";
-				}
-
-			}
-		}
-	}
-
-</script>

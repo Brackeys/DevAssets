@@ -34,7 +34,4 @@ screenshots:
   - Screenshot03.jpg
 
 #Optional video url
-#Make sure to use embed-version of the url
-show-video: true
-video-url: https://www.youtube.com/embed/uhZ5mFli1S8
 ---
