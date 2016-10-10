@@ -1,0 +1,105 @@
+---
+# Snipcart Custom
+---
+@charset "utf-8";
+
+// Import partials
+@import "variables";
+
+.snip-layout {
+
+	font-family: $base-font-family;
+
+	p {
+		text-shadow: none;
+	}
+
+	#snipcart-discounts {
+		display: none;
+	}
+
+	#snipcart-fees {
+		display: none;
+	}
+
+	.snip-product__name {
+		margin-top: 0px;
+	}
+
+	.snip-customfields {
+		width: 130px;
+
+		label {
+			font-size: initial;
+			box-shadow: none;
+			margin: auto;
+			height: 30px;
+			font-weight: bold;
+			color: #333;
+		}
+	}
+
+	#snipcart-items {
+		.snip-table__cell--center, .snip-table__cell--right  {
+			display: none;
+		}
+
+		label {
+			margin: 0 0 1em !important;
+		}
+
+		#snipcart-total td {
+			display: table-cell;
+		}
+	}
+
+
+	.snipcart-step {
+
+		label {
+			font-size: initial;
+			margin: 20px 0 1em;
+			height: 100%;
+			box-shadow: none;
+		}
+
+		#snipcart-billingaddress-form {
+			.snip-form__container {
+				margin: auto;
+			}
+
+			label[for=snip-company], #snip-company { 
+				display: none;
+			}
+
+			label[for=snip-address1], #snip-address1 { 
+				display: none;
+			}
+
+			label[for=snip-postalCode], #snip-postalCode { 
+				display: none;
+			}
+
+			label[for=snip-address2], #snip-address2 { 
+				display: none;
+			}
+
+			label[for=snip-country], #snip-country { 
+				display: none;
+			}
+
+			#snipcart-billing-state-picker-holder {
+				display: none;
+			}
+
+			label[for=snip-phone], #snip-phone { 
+				display: none;
+			}
+		}
+
+		#snipcart-cart-content .snip-customfields {
+			visibility: hidden;
+		}
+	}
+
+}

@@ -10,16 +10,21 @@
 		data-item-name="{{page.name}}"
 		data-item-id="{{page.id}}-test"
 		data-item-image="{{site.github.url}}{{img-path}}/{{page.one-third-img}}"
+		data-item-description="{{page.description}}"
 		data-item-url="{{site.github.url}}{{page.url}}"
-		data-item-price="2"
+		data-item-price="5"
 		data-item-custom1-name="Price"
-		data-item-custom1-options="2|5[+3.00]|10[+8.00]|20[+18.00]"
+		data-item-custom1-options="$2[-3.00]|$5|$10[+5.00]|$20[+15.00]"
 		onclick="onAddItem()"
 		>
 		Pay what you want!
 	</button>
 
 	<script>
+	$(function() {
+		updatePayAmount("5");
+	});
+
 	function onAddItem () {
 		Snipcart.api.items.clear();
 	}
@@ -32,7 +37,7 @@
 		var freeButtonElement = document.getElementById( 'pay-button-free' );
 
 		if (amount > 0) {
-			payButton.data('item-custom1-value', amount);
+			payButton.data('item-custom1-value', "$" + amount);
 
 			payButtonElement.style.display = 'block';
 			freeButtonElement.style.display = 'none';
@@ -41,6 +46,23 @@
 			freeButtonElement.style.display = 'block';
 		}
 	}
+
+	Snipcart.subscribe('cart.ready', function() {
+		Snipcart.api.cart.billingAddress({
+			"name": "",
+			"email": "",
+			"address1": "Some Address",
+			"address2": "",
+			"city": "",
+			"province": "",
+			"country": "",
+			"company": "",
+			"postalCode": "0000"
+		}).then (function (cart) {
+			console.log (cart); // It will contain the cart details with updated values.
+		});
+	});
+
 	</script>
 
 	<button
