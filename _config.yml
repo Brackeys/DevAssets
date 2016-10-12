@@ -26,6 +26,7 @@ github_username:  Brackeys
 #Global vars
 asset-img-path: /img/assets/
 asset-path: /assets/
+asset-download-path: /downloads/assets/
 
 #Snipcart
 snipcart-api-key: M2RjMTc3NGUtYjNhMC00NTFlLWJjN2ItOTBkNGNkNDRjN2U2NjM2MTE0NTA4MDE5ODI4MDU5
@@ -56,3 +57,4 @@ defaults:
       two-thirds-img: TwoThirds.jpg
       one-third-img: OneThird.jpg
       show: true
+      file-type: .zip

@@ -73,11 +73,13 @@
 			}
 
 			label[for=snip-address1], #snip-address1 { 
-				display: none;
+				//display: none;
+				opacity: .7;
 			}
 
 			label[for=snip-postalCode], #snip-postalCode { 
-				display: none;
+				//display: none;
+				opacity: .7;
 			}
 
 			label[for=snip-address2], #snip-address2 { 

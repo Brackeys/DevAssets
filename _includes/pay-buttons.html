@@ -1,6 +1,10 @@
-{% assign img-folder = page.title | remove: " -" | replace: " ", "-" | downcase %}
+{% assign asset-name = page.title | remove: " -" | replace: " ", "-" | downcase %}
 
-{% assign img-path = site.asset-img-path | append: img-folder %}
+{% assign img-path = site.asset-img-path | append: asset-name %}
+
+{% assign download-path = site.asset-download-path | append: asset-name %}
+
+{% include downloader.html %}
 
 <section class="pay-buttons" data-toggle="button">
 
@@ -12,11 +16,10 @@
 		data-item-image="{{site.github.url}}{{img-path}}/{{page.one-third-img}}"
 		data-item-description="{{page.description}}"
 		data-item-url="{{site.github.url}}{{page.url}}"
+		data-item-max-quantity="1"
 		data-item-price="5"
 		data-item-custom1-name="Price"
-		data-item-custom1-options="$2[-3.00]|$5|$10[+5.00]|$20[+15.00]"
-		onclick="onAddItem()"
-		>
+		data-item-custom1-options="$2[-3.00]|$5|$10[+5.00]|$20[+15.00]">
 		Pay what you want!
 	</button>
 
@@ -25,9 +28,25 @@
 		updatePayAmount("5");
 	});
 
+	/*
 	function onAddItem () {
-		Snipcart.api.items.clear();
+		//Snipcart.api.items.clear();
 	}
+	*/
+
+	Snipcart.subscribe('cart.ready', function (data) {
+		Snipcart.api.cart.billingAddress({
+			"name": "",
+			"email": "",
+			"address1": " ",
+			"address2": " ",
+			"city": "",
+			"province": "",
+			"country": "",
+			"company": " ",
+			"postalCode": " "
+		})
+	});
 
 	function updatePayAmount(amount) {
 
@@ -47,20 +66,6 @@
 		}
 	}
 
-	Snipcart.subscribe('cart.ready', function() {
-		Snipcart.api.cart.billingAddress({
-			"name": "",
-			"email": "",
-			"address1": " ",
-			"address2": " ",
-			"city": "",
-			"province": "",
-			"country": "",
-			"company": " ",
-			"postalCode": " "
-		})
-	});
-
 	Snipcart.api.configure('allowed_provinces', [
 		{ country: 'US', provinces: [''] },
 		{ country: 'CA', provinces: [''] },
@@ -72,12 +77,13 @@
     "billing_address": "About Me",
     "confirm_order": "Confirm",
     "payment_method_card_exp_month": "Expiration month",
-    "finalize": "Support Now"
+    "finalize": "Support Now",
+    "thankyou_message": "Thank you for supporting! Your invoice has been sent to you by email, you should receive it soon.",
+    "notifications_item_not_added_due_to_max_quantity": "You already have that item selected."
 	});
 
 	Snipcart.subscribe('order.completed', function (data) {
-		console.log(data);
-		console.log(data.items[0].price);
+		openDownloadModal();
 	});
 
 	</script>
@@ -85,7 +91,8 @@
 	<button
 		id="pay-button-free"
 		class="pay"
-		style="display: none;">
+		style="display: none;"
+		onclick="Download()">
 		Grab it for free!
 	</button>
 
