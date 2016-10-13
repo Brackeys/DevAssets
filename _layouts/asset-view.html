@@ -24,7 +24,14 @@ style:
 
 <section class="information">
 	<div class="description">
-		<p>{{ page.description }}</p>
+
+		{% assign content = page.content | strip_newlines %}
+
+		{% if content == "" %}
+			<p>{{ page.description }}</p>
+		{% else %}
+			<p>{{ page.content }}</p>
+		{% endif %}
 	</div>
 	<div class="contains">
 		<h3>Contains:</h3>

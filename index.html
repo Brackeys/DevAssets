@@ -18,7 +18,9 @@ title: Home
 		{% include featured-banner.html %}
 
 		{% for asset in site.assets limit:3 %}
-			{% include one-third-asset.html asset=asset %}
+			{% if asset.show %}
+				{% include one-third-asset.html asset=asset %}
+			{% endif %}
 		{% endfor %}
 	</section>
 
