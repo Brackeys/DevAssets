@@ -56,8 +56,7 @@
 			display: table-cell;
 		}
 	}
-
-
+	
 	.snipcart-step {
 
 		label {
@@ -74,16 +73,6 @@
 
 			label[for=snip-company], #snip-company { 
 				display: none;
-			}
-
-			label[for=snip-address1], #snip-address1 { 
-				//display: none;
-				opacity: .7;
-			}
-
-			label[for=snip-postalCode], #snip-postalCode { 
-				//display: none;
-				opacity: .7;
 			}
 
 			label[for=snip-address2], #snip-address2 { 
