@@ -19,7 +19,9 @@
 		data-item-max-quantity="1"
 		data-item-price="5"
 		data-item-custom1-name="Price"
-		data-item-custom1-options="$2[-3.00]|$5|$10[+5.00]|$20[+15.00]">
+		data-item-custom1-options="$2[-3.00]|$5|$10[+5.00]|$20[+15.00]"
+		data-item-custom2-name="Download"
+		data-item-custom2-value="{{site.github.url}}{{download-path}}{{page.file-type}}">
 		Pay what you want!
 	</button>
 
@@ -83,6 +85,7 @@
 	});
 
 	Snipcart.subscribe('order.completed', function (data) {
+		console.log(data);
 		openDownloadModal();
 	});
 
