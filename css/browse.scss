@@ -10,3 +10,23 @@
 	max-width: $browse-width;
 	margin: auto;
 }
+
+.course-assets {
+	float: left;
+	box-sizing: border-box;
+
+	max-width: $browse-width;
+	width: 100%;
+
+	h1 {
+		margin: 40px 0 0 0;
+
+		font-size: 50px;
+		text-transform: uppercase;
+	}
+
+	p {
+		font-size: 24px;
+		margin: 0 0 30px 0;
+	}
+}

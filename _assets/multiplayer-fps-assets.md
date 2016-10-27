@@ -22,11 +22,13 @@ screenshots:
   - Screenshot02.jpg
   - Screenshot03.jpg
 
-show: false
+is-for-course: true
 
 #Optional video url
 #Make sure to use embed-version of the url
 video: "https://www.youtube.com/embed/videoseries?list=PLPV2KyIb3jR5PhGqsO7G4PsbEC_Al-kPZ"
 ---
 
-These are the weapons, player models and UI elements used in the [Multiplayer FPS course](https://www.youtube.com/playlist?list=PLPV2KyIb3jR5PhGqsO7G4PsbEC_Al-kPZ){:target="_blank"}. The arena is downloaded seperately [HERE](/assets/medieval-arena/).
+These are the weapons, player models and UI elements used in the [Multiplayer FPS course](https://www.youtube.com/playlist?list=PLPV2KyIb3jR5PhGqsO7G4PsbEC_Al-kPZ){:target="_blank"}.
+
+**The arena is downloaded seperately [HERE](/assets/medieval-arena/).**

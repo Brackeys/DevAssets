@@ -57,4 +57,5 @@ defaults:
       two-thirds-img: TwoThirds.jpg
       one-third-img: OneThird.jpg
       show: true
+      is-for-course: false
       file-type: .zip

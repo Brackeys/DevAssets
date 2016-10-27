@@ -17,9 +17,29 @@ title: Browse
 
 	{% for asset in site.assets %}
 		{% if asset.show %}
+
+			{% unless asset.is-for-course %}
+
 			{% include one-third-asset.html asset=asset %}
+
+			{% endunless %}
+
 		{% endif %}
 	{% endfor %}
 
+	<div class="course-assets">
+
+	<h1>Course Assets</h1>
+	<p>Models, sprites, scripts, sounds etc. used in the <a href="http://youtube.com/brackeys/">Brackeys</a> courses.</p>
+
+	{% for asset in site.assets %}
+		{% if asset.show and asset.is-for-course%}
+
+			{% include one-third-asset.html asset=asset %}
+			
+		{% endif %}
+	{% endfor %}
+
+	</div>
 
 </div>
