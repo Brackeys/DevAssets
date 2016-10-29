@@ -43,14 +43,6 @@ style:
 	</div>
 </section>
 
-{% if page.video %}
-<section class="video">
-	<div class="videoWrapper">
-		<iframe width="560" height="315" src="{{page.video}}" frameborder="0" allowfullscreen></iframe>
-	</div>
-</section>
-{% endif %}
-
 <section class="screenshots">
 
 	{% for screenshot in page.screenshots %}
@@ -58,3 +50,11 @@ style:
 	{% endfor %}
 
 </section>
+
+{% if page.video %}
+<section class="video">
+	<div class="videoWrapper">
+		<iframe width="560" height="315" src="{{page.video}}" frameborder="0" allowfullscreen></iframe>
+	</div>
+</section>
+{% endif %}

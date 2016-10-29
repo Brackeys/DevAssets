@@ -17,10 +17,12 @@ title: Home
 	<section>
 		{% include featured-banner.html %}
 
-		{% for asset in site.assets limit:3 %}
-			{% if asset.show %}
-				{% include one-third-asset.html asset=asset %}
+		{% for asset in site.assets %}
+			{% if asset.show != true or asset.is-for-course == true %}
+				{% continue %}
 			{% endif %}
+			
+			{% include one-third-asset.html asset=asset %}
 		{% endfor %}
 	</section>
 
