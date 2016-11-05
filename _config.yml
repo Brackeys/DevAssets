@@ -40,6 +40,9 @@ featured-one-third: Adventure Starter Pack
 markdown: kramdown
 theme: minima
 
+gems:
+  - jekyll-sitemap
+
 sass:
   sass_dir: css/_sass
 
