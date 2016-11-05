@@ -6,9 +6,11 @@
 
 	box-shadow: 2px 2px 20px #232323;
 
+	border-style: solid;
+	border-width: 1px;
+	border-color: transparent;
+
 	&:hover {
-		border-style: solid;
-		border-width: 1px;
 		border-color: white;
 	}
 

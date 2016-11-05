@@ -1,4 +1,4 @@
-{% assign featured-asset = site.assets | where:"title", site.featured-banner | first %}
+{% assign featured-asset = site.assets | where:"name", site.featured-banner | first %}
 
 {% assign real-name = featured-asset.title | remove: " -" | replace: " ", "-" | downcase %}
 
