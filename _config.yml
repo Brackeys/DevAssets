@@ -50,6 +50,7 @@ collections:
   assets:
     output: true
     permalink: /:collection/:title/
+  artists:
 
 defaults:
   - scope:

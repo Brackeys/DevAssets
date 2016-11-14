@@ -43,7 +43,9 @@ style:
 	</div>
 </section>
 
-{% include artist-credit.html %}
+{% if page.artist %}
+	{% include artist-credit.html %}
+{% endif %}
 
 <section class="screenshots">
 
