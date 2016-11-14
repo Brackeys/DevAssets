@@ -30,6 +30,13 @@ function openDownloadModal () {
 function Download () {
 	window.location.replace("{{site.github.url}}{{download-path}}{{page.file-type}}");
 
+	ga('send', {
+		hitType: 'event',
+		eventCategory: 'Asset Packs',
+		eventAction: 'download',
+		eventLabel: '{{page.title}}'
+	});
+
 	closeDownloadModal();
 }
 

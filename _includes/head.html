@@ -36,4 +36,8 @@
 		<link rel="stylesheet" type="text/css" href="{{site.github.url}}/css/{{style}}.css">
 	{% endfor %}
 
+	{% if jekyll.environment == 'production' %}
+		{% include analytics.html %}
+	{% endif %}
+
 </head>
