@@ -28,6 +28,8 @@ asset-img-path: /img/assets/
 asset-path: /assets/
 asset-download-path: /downloads/assets/
 
+artist-img-path: /img/artists/
+
 #Snipcart
 snipcart-api-key: M2RjMTc3NGUtYjNhMC00NTFlLWJjN2ItOTBkNGNkNDRjN2U2NjM2MTE0NTA4MDE5ODI4MDU5
 

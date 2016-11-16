@@ -1,7 +1,11 @@
 {% assign artist = site.artists | where:"name", page.artist  | first %}
 
 <section class="artist-credit">
-	<img class="portrait" src="http://www.hmcoloringpages.com/wp-content/uploads/man-portrait-silhouette.gif" alt="{{artist.name}} Portrait" border="0">
-	<h1>{{artist.name}}</h1>
+	<div class="made-by">
+		<h3>Made <br/> by</h3>
+		<img src="/img/elements/CurvedArrow.png">
+	</div>
+	<img class="portrait" src="{{site.github.url}}{{site.artist-img-path}}{{artist.img}}" alt="{{artist.name}} Portrait" border="0">
+	<h3>{{artist.name}}</h3>
 	<p>{{artist.content}}</p>
 </section>

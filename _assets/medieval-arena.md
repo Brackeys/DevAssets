@@ -4,8 +4,6 @@ name: Medieval Arena
 
 description: Battle it out in this beautiful high poly arena! The pack comes with both models and textures along with a Unity Package that sets everything up for you!
 
-artist: Artist Name
-
 # List of assets in the pack
 assets:
   - .FBX

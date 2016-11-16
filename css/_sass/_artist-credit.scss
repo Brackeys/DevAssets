@@ -4,4 +4,26 @@
 	display: table;
 
 	margin-bottom: 30px;
+
+	h3 {
+		padding-top: 20px;
+	}
+
+	.made-by {
+		float: left;
+		margin: auto;
+
+		height: 160px;
+		width: 140px;
+
+		h3 {
+			font-weight: lighter;
+		}
+
+		img {
+			position: relative;
+			left: 55px;
+			bottom: 22px;
+		}
+	}
 }
