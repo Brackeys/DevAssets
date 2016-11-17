@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-permalink: /about/
+permalink: /about_old/
 ---
 
 The goal of this site is to allow anyone - no matter their budget - to download high-quality assets to use in their commercial projects.

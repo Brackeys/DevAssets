@@ -1,0 +1,84 @@
+---
+# About
+---
+@charset "utf-8";
+
+// Import partials
+@import "variables";
+
+.about {
+	max-width: $browse-width;
+	margin: auto;
+
+	p {
+		font-size: 24px;
+		line-height: 39px;
+	}
+
+	h3 {
+		padding-top: 10px;
+		font-weight: lighter;
+	}
+
+	h1 {
+		margin: auto;
+		line-height: 60px;
+	}
+
+	.circle-image {
+		height: 180px; /*Specify Height*/
+		width:  180px; /*Specify Width*/
+
+		margin-top: 20px;
+
+		border-radius: 50%;
+		background-color: $darker-background; /*Add a background color to the box*/
+
+		img {
+			display: block;
+			position: relative;
+
+			max-width: none;
+		}
+
+		.sword {
+			bottom: 60px;
+			left: 30px;
+		}
+
+		.me {
+			bottom: 230px;
+			right: 150px;
+		}
+	}
+
+	.left {
+		float: left;
+		margin-right: 55px;
+	}
+
+	.right {
+		float: right;
+		margin-left: 75px;
+	}
+
+	.quality-assets {
+		margin-top: 60px;
+		height: 250px;
+	}
+
+	.pay-what-you-want {
+		text-align: right;
+
+		.circle-image {
+			top: 100px;
+			position: relative
+		}
+	}
+
+	.who-are-we {
+		float: left;
+		width: calc(100% - 200px);
+	}
+
+}
