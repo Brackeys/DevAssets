@@ -1,6 +1,6 @@
-{% assign featured-asset = site.assets | where:"title", site.featured-two-thirds | first %}
+{% assign featured-asset = site.assets | where:"name", site.featured-two-thirds | first %}
 
-{% assign real-name = featured-asset.title | remove: " -" | replace: " ", "-" | downcase %}
+{% assign real-name = featured-asset.name | remove: " -" | replace: " ", "-" | downcase %}
 
 {% assign img-path = site.asset-img-path | append: real-name %}
 

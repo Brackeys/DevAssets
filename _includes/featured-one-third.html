@@ -1,3 +1,3 @@
-{% assign featured-asset = site.assets | where:"title", site.featured-one-third | first %}
+{% assign featured-asset = site.assets | where:"name", site.featured-one-third | first %}
 
 {% include one-third-asset.html asset=featured-asset %}
