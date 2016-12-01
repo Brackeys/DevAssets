@@ -1,0 +1,12 @@
+<script src="https://viewer.marmoset.co/main/marmoset.js"></script>
+
+<section>
+	<div id="marmoset-viewer" class="marmoset-viewer">
+	<script>
+        var myviewer = marmoset.embed( "{{site.github.url}}/marmoset/{{include.viewer}}", { width: 960, height: 600, autoStart: false, fullFrame: false, pagePreset: false, thumbnailURL: "{{site.github.url}}{{img-path}}/{{include.thumbnail}}" } );
+
+        document.getElementById("marmoset-viewer").appendChild( myviewer.domRoot);
+    </script>
+
+    </div>
+</section>
