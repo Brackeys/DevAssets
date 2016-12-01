@@ -56,9 +56,13 @@ style:
 </section>
 
 {% if page.video %}
-<section class="video">
-	<div class="videoWrapper">
-		<iframe width="560" height="315" src="{{page.video}}" frameborder="0" allowfullscreen></iframe>
-	</div>
-</section>
+	<section class="video">
+		<div class="videoWrapper">
+			<iframe width="560" height="315" src="{{page.video}}" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</section>
+{% else %}
+	<div class="separator"></div>
 {% endif %}
+
+{% include three-random-assets.html %}

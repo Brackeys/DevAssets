@@ -26,3 +26,15 @@
 		max-width: $home-width;
 	}
 }
+
+.separator {
+	width: 400px;
+	background-color: #3e3e3e;
+	height: 2px;
+	max-width: 960px;
+	margin: auto;
+	margin-bottom: 25px;
+	margin-top: 20px;
+	clear: both;
+	border-radius: 2px;
+}

@@ -1,0 +1,27 @@
+<section class="three-random-assets">
+
+	{% assign assetList = "" | split:"|"" %}
+
+	{% for asset in site.assets %}
+		{% if asset.name != page.name %}
+			{% assign assetList = assetList | push: asset %}
+		{% endif %}
+	{% endfor %}
+
+	{% assign hours1 = site.time | date: "%H" | plus:100 %}
+	{% assign hours2 = site.time | date: "%H" | plus:101 %}
+	{% assign hours3 = site.time | date: "%H" | plus:102 %}
+
+	{% assign random1 = page.title.size | plus: hours1 | modulo: assetList.size %}
+	{% assign random2 = page.title.size | plus: hours2 | modulo: assetList.size %}
+	{% assign random3 = page.title.size | plus: hours3 | modulo: assetList.size %}
+
+	{% assign asset1 = assetList[random1] %}
+	{% assign asset2 = assetList[random2] %}
+	{% assign asset3 = assetList[random3] %}
+
+	{% include one-third-asset.html asset=asset1 %}
+	{% include one-third-asset.html asset=asset2 %}
+	{% include one-third-asset.html asset=asset3 %}
+
+</section>
