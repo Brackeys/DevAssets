@@ -20,15 +20,13 @@ title: Home
 	{% include three-sections.html %}
 
 	<section>
-		{% include featured-banner.html %}
+		{% assign one-third-1 = site.assets | where:"name", site.home-one-third-1 | first %}
+		{% assign one-third-2 = site.assets | where:"name", site.home-one-third-2 | first %}
+		{% assign one-third-3 = site.assets | where:"name", site.home-one-third-3 | first %}
 
-		{% for asset in site.assets %}
-			{% if asset.show != true or asset.is-for-course == true %}
-				{% continue %}
-			{% endif %}
-			
-			{% include one-third-asset.html asset=asset %}
-		{% endfor %}
+		{% include one-third-asset.html asset=one-third-1 %}
+		{% include one-third-asset.html asset=one-third-2 %}
+		{% include one-third-asset.html asset=one-third-3 %}
 	</section>
 
 </div>

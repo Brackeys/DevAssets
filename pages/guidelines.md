@@ -12,4 +12,4 @@ Using assets from this site is extremely permissive:
 
 - You do NOT need to credit this website or any person contributing thereto although anything that helps spread the word is always much appreciated.
 
-**Make sure that any assets downloaded from this site are only distributed as part of your creation and not as a standalone product.**
+**Make sure that any assets downloaded from this site are only distributed as part of your creation and not as a standalone product. Simply redistributing the assets is NOT allowed.**

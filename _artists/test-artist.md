@@ -3,7 +3,7 @@
 name: Artist Name
 
 # Name of the img
-img: Test.jpg
+img: asbjørn-thirslund.jpg
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend massa vel velit facilisis eleifend. Vivamus in metus vel odio placerat mattis.

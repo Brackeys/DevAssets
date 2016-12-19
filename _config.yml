@@ -34,9 +34,13 @@ artist-img-path: /img/artists/
 snipcart-api-key: M2RjMTc3NGUtYjNhMC00NTFlLWJjN2ItOTBkNGNkNDRjN2U2NjM2MTE0NTA4MDE5ODI4MDU5
 
 #Featured
-featured-banner: 2D Mega Pack
-featured-two-thirds: Medieval Arena
+featured-banner: Medieval Arena
+featured-two-thirds: Modern Weapons
 featured-one-third: Sci-Fi Vehicles
+
+home-one-third-1: 2D Mega Pack
+home-one-third-2: Adventure Starter Pack
+home-one-third-3: Tower Defense Assets
 
 # Build settings
 markdown: kramdown

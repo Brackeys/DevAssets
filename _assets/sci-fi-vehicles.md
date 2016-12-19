@@ -2,6 +2,8 @@
 # Name of the pack
 name: Sci-Fi Vehicles
 
+artist: Stefan Marinca
+
 # List of assets in the pack
 assets:
   - Small racer
