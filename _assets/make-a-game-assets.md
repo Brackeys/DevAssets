@@ -14,8 +14,9 @@ assets:
   - Textures
   - Ball
   - Platform
-  - Enemy
   - Icon
+  - .fbx
+  - .blend
 
 # Names of the screenshots
 screenshots:
@@ -29,4 +30,4 @@ video: "https://www.youtube.com/embed/videoseries?list=PLPV2KyIb3jR4u6zeBY77WPj0
 
 These are the models, scripts, sounds and textures used in the [Make a Game course](https://www.youtube.com/playlist?list=PLPV2KyIb3jR4u6zeBY77WPj0KuFdmv84g){:target="_blank"}.
 
-*Check out the video series for a detailed explanation on how to import and use the assets.*
+**The enemy is downloaded separately from the [Brackeys Website](http://brackeys.com/preview/make-a-game/){:target="_blank"}.** 
