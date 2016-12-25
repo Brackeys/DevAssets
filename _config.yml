@@ -16,7 +16,7 @@
 title: Dev Assets
 description: > # this means to ignore newlines until "baseurl:"
   High-quality 3D models for game developers!
-  Pay what you want for these full-featured asset packs.
+  Dev Assets allows you to pay what you want for full-featured asset packs.
   Textured, rigged, animated & optimized.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://devassets.com" # the base hostname & protocol for your site
