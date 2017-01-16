@@ -5,6 +5,8 @@ name: Adventure Starter Pack
 # Short description
 description: A collection of models to use as a base for your 3D adventure game.
 
+priority: 0
+
 # List of assets in the pack
 assets:
   - Gladiator

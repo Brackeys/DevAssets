@@ -7,6 +7,8 @@ style:
 title: Browse
 ---
 
+{% assign sorted_assets = (site.assets | sort: 'priority') %}
+
 <div class="browse">
 
 	{% include featured-two-thirds.html %}
@@ -15,7 +17,7 @@ title: Browse
 
 	{% include featured-banner.html %}
 
-	{% for asset in site.assets %}
+	{% for asset in sorted_assets %}
 		{% if asset.show %}
 
 			{% unless asset.is-for-course %}
@@ -32,7 +34,7 @@ title: Browse
 	<h1>Course Assets</h1>
 	<p>Models, sprites, scripts, sounds etc. used in the <a href="http://youtube.com/brackeys/">Brackeys</a> courses.</p>
 
-	{% for asset in site.assets %}
+	{% for asset in sorted_assets %}
 		{% if asset.show and asset.is-for-course%}
 
 			{% include one-third-asset.html asset=asset %}

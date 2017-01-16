@@ -36,9 +36,11 @@ snipcart-api-key: NjY3ZTgwNGQtNjM2Ni00YjUzLWExZGYtNjRjNGRlNzcxZmIwNjM2MTE0NTA4MD
 #M2RjMTc3NGUtYjNhMC00NTFlLWJjN2ItOTBkNGNkNDRjN2U2NjM2MTE0NTA4MDE5ODI4MDU5
 
 #Featured
-featured-banner: Medieval Arena
+featured-banner: 2D Mega Pack
 featured-two-thirds: Modern Weapons
 featured-one-third: Sci-Fi Vehicles
+
+home-banner: Western Props Pack
 
 home-one-third-1: 2D Mega Pack
 home-one-third-2: Adventure Starter Pack
@@ -69,6 +71,7 @@ defaults:
       banner-img: Banner.jpg
       two-thirds-img: TwoThirds.jpg
       one-third-img: OneThird.jpg
+      priority: 10
       show: true
       is-for-course: false
       file-type: .zip

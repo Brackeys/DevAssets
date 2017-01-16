@@ -28,6 +28,28 @@
 	}
 }
 
+.home-banner {
+	.new {
+		position: relative;
+		left: -110px;
+		float: left;
+		top: 50px;
+		display: block;
+		height: 0px;
+
+		h3 {
+			font-family: 'Indie Flower', cursive;
+			font-weight: lighter;
+		}
+
+		img {
+			position: relative;
+			left: 22px;
+			bottom: 10px;
+		}
+	}
+}
+
 .featured-two-thirds {
 	width: calc(66.666% - 6px);
 }

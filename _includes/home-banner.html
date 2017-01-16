@@ -1,0 +1,20 @@
+{% assign featured-asset = site.assets | where:"name", site.home-banner | first %}
+
+{% assign real-name = featured-asset.title | remove: " -" | replace: " ", "-" | downcase %}
+
+{% assign img-path = site.asset-img-path | append: real-name %}
+
+<div class="home-banner">
+
+	<div class="new">
+		<h3>New</h3>
+		<img src="/img/elements/CurvedArrow.png">
+	</div>
+
+	<div class="asset">
+		<a href="{{site.github.url}}{{site.asset-path}}{{real-name}}/">
+			<img class="banner-img" src="{{site.github.url}}{{img-path}}/{{featured-asset.banner-img}}" alt="{{featured-asset.title}}">
+		</a>
+	</div>
+
+</div>
