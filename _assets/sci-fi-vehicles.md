@@ -21,6 +21,8 @@ screenshots:
   - Screenshot02.jpg
   - Screenshot03.jpg
 
+video: "https://www.youtube.com/embed/H5v_X1k02U0"
+
 ---
 
 Three super high quality vehicles with **modular parts**. Comes with handpainted **PBR textures** which can easily be tinted to create variations in color. The vehicles are well optimized and ready to go!
