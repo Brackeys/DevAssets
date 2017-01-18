@@ -20,12 +20,13 @@ assets:
   - Wooden Crate
   - Example Scene
 
-
 # Names of the screenshots
 screenshots:
   - Screenshot01.jpg
   - Screenshot02.jpg
   - Screenshot03.jpg
+
+video: "https://www.youtube.com/embed/a1bTMa_fj5Q"
 
 ---
 
