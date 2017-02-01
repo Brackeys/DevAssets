@@ -18,6 +18,7 @@ assets:
   - Wooden Barrel
   - Wooden Bucket
   - Wooden Crate
+  - Destructibles
   - Example Scene
 
 # Names of the screenshots
@@ -30,6 +31,6 @@ video: "https://www.youtube.com/embed/a1bTMa_fj5Q"
 
 ---
 
-Howdy partner! Here we have 10 premium PBR, western assets. A perfect choice for any rustic scene!
+**Howdy partner!** Here we have 10 premium PBR, western assets. A perfect choice for any rustic scene!
 
 By now, you could have already had them downloaded, and implemented within a matter of minutes. Enjoy!
