@@ -4,7 +4,9 @@
 
 	{% for asset in site.assets %}
 		{% if asset.name != page.name %}
-			{% assign assetList = assetList | push: asset %}
+			{% if asset.show %}
+				{% assign assetList = assetList | push: asset %}
+			{% endif %}
 		{% endif %}
 	{% endfor %}
 

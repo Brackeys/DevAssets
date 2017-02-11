@@ -16,6 +16,14 @@ style:
 
 </section>
 
+<section class="screenshots">
+
+	{% for screenshot in page.screenshots %}
+	<img class="screenshot" src="{{site.github.url}}{{img-path}}/{{screenshot}}" alt="{{page.title}} Screenshot" border="0">
+	{% endfor %}
+
+</section>
+
 <section>
 	<h1>{{ page.name }}</h1>
 </section>
@@ -47,14 +55,6 @@ style:
 {% if page.artist %}
 	{% include artist-credit.html %}
 {% endif %}
-
-<section class="screenshots">
-
-	{% for screenshot in page.screenshots %}
-	<img class="screenshot" src="{{site.github.url}}{{img-path}}/{{screenshot}}" alt="{{page.title}} Screenshot" border="0">
-	{% endfor %}
-
-</section>
 
 {% if page.marmoset %}
 	{% include marmoset-viewer.html viewer=page.marmoset thumbnail=page.marmoset-thumbnail %}
