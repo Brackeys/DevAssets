@@ -1,13 +1,5 @@
 <link rel="stylesheet" type="text/css" href="{{site.github.url}}/css/download-modal.css">
 
-{% if download-path %}
-
-{% else %}
-	{% assign asset-name = page.title | remove: " -" | replace: " ", "-" | downcase %}
-
-	{% assign download-path = site.asset-download-path | append: asset-name %}
-{% endif %}
-
 <div class="download-modal hidden" id="download-modal">
 
 	<h1>Download</h1>
@@ -28,7 +20,7 @@ function openDownloadModal () {
 }
 
 function Download () {
-	window.location.replace("{{site.github.url}}{{download-path}}{{page.file-type}}");
+	window.location.replace("{{download-path}}");
 
 	ga('send', {
 		hitType: 'event',

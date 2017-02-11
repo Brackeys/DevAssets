@@ -6,6 +6,8 @@ description: A highly detailed Desert Environment perfect for any FPS or third-p
 
 artist: Sam Troth
 
+download-path: http://brackeys.com/devassets/desert-environment.zip
+
 # List of assets in the pack
 assets:
   - Buildings set
