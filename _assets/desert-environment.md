@@ -26,6 +26,8 @@ screenshots:
   - Screenshot02.jpg
   - Screenshot03.jpg
 
+video: https://www.youtube.com/embed/k9S9N3eYwjQ
+
 ---
 
 A highly detailed Desert Environment perfect for any **FPS** or **third-person shooter**. All the models are PBR and can be combined to create interesting and unique levels!
