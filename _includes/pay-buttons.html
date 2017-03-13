@@ -29,16 +29,64 @@
 		Pay what you want!
 	</button>
 
-	<script>
+	<button
+		id="pay-button-free"
+		class="pay"
+		style="display: none;"
+		onclick="Download()">
+		Grab it for free!
+	</button>
+
+	<label class="btn btn-primary"><input type="radio" value="0" name="options" id="5" autocomplete="off" onclick="updatePayAmount(this.value)"><span>$0</span>
+	</label>
+
+	<label class="btn btn-primary"><input type="radio" value="20" name="options" id="4" autocomplete="off" onclick="updatePayAmount(this.value)"><span>$20</span>
+	</label>
+
+	<label class="btn btn-primary"><input type="radio" value="10" name="options" id="3" autocomplete="off" onclick="updatePayAmount(this.value)"><span>$10</span>
+	</label>
+
+	<label class="btn btn-primary active"><input type="radio" value="5" name="options" id="2" autocomplete="off" onclick="updatePayAmount(this.value)" checked><span>$5</span>
+	</label>
+
+	<label class="btn btn-primary"><input type="radio" value="2" name="options" id="1" autocomplete="off" onclick="updatePayAmount(this.value)"><span>$2</span>
+	</label>
+
+</section>
+
+<section class="tiers">
+
+{% for tier in page.tiers %}
+
+	<div class="tier" data-cost="{{tier.cost}}">
+		<img src="http://127.0.0.1:4000/img/assets/medieval-arena/Screenshot03.jpg">
+		<div class="tier-cost">
+			<h3>UNLOCKED AT</h3>
+			<h1>${{tier.cost}}</h1>
+		</div>
+		<div class="tier-footer">
+			<h3><b>{{tier.title}}</b> {{tier.after}}</h3>
+		</div>
+	</div>
+
+{% endfor %}
+	
+</section>
+
+<script>
+
 	$(function() {
-		updatePayAmount("5");
+		updatePayAmount(5);
 	});
 
-	/*
-	function onAddItem () {
-		//Snipcart.api.items.clear();
-	}
-	*/
+	$(".tier").click(function() {
+		var tierCost = $(this).attr("data-cost");
+
+		if (tierCost == 0)
+			updatePayAmount(2);
+		else
+			updatePayAmount(tierCost);
+	});
 
 	Snipcart.subscribe('cart.ready', function (data) {
 		Snipcart.api.cart.billingAddress({
@@ -70,6 +118,27 @@
 			payButtonElement.style.display = 'none';
 			freeButtonElement.style.display = 'block';
 		}
+
+		$('div.tier').each(function(i, obj) {
+
+			if (+amount >= +obj.dataset.cost) {
+				$(this).addClass("active");
+			} else {
+				$(this).removeClass("active");
+			}
+
+		});
+
+		$("input[name=options]").each(function(i, obj) {
+
+			var buttonAmount = $(this).attr("value");
+
+			if (buttonAmount == amount) {
+				$(this).prop("checked", true);
+			}
+
+		});
+
 	}
 
 	Snipcart.api.configure('allowed_provinces', [
@@ -89,33 +158,7 @@
 	});
 
 	Snipcart.subscribe('order.completed', function (data) {
-		console.log(data);
 		openDownloadModal();
 	});
 
 	</script>
-
-	<button
-		id="pay-button-free"
-		class="pay"
-		style="display: none;"
-		onclick="Download()">
-		Grab it for free!
-	</button>
-
-	<label class="btn btn-primary"><input type="radio" value="0" name="options" id="5" autocomplete="off" onclick="updatePayAmount(this.value)"><span>$0</span>
-	</label>
-
-	<label class="btn btn-primary"><input type="radio" value="20" name="options" id="4" autocomplete="off" onclick="updatePayAmount(this.value)"><span>$20</span>
-	</label>
-
-	<label class="btn btn-primary"><input type="radio" value="10" name="options" id="3" autocomplete="off" onclick="updatePayAmount(this.value)"><span>$10</span>
-	</label>
-
-	<label class="btn btn-primary active"><input type="radio" value="5" name="options" id="2" autocomplete="off" onclick="updatePayAmount(this.value)" checked><span>$5</span>
-	</label>
-
-	<label class="btn btn-primary"><input type="radio" value="2" name="options" id="1" autocomplete="off" onclick="updatePayAmount(this.value)"><span>$2</span>
-	</label>
-
-</section>

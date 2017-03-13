@@ -28,8 +28,6 @@ style:
 	<h1>{{ page.name }}</h1>
 </section>
 
-{% include pay-buttons.html %}
-
 <section class="information">
 	<div class="description">
 
@@ -51,6 +49,8 @@ style:
 		</ul>
 	</div>
 </section>
+
+{% include pay-buttons.html %}
 
 {% if page.artist %}
 	{% include artist-credit.html %}
