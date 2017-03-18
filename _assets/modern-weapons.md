@@ -14,16 +14,16 @@ assets:
   - 870 Shotgun
   - Pistol (9mm)
 
-tiers:
-  - title: "Base Pack"
-    after: " (5 weapons)"
-    cost: 0
-  - title: "AK-47"
-    after: " in PBR"
-    cost: 5
-  - title: "M4A1"
-    after: " in high quality"
-    cost: 10
+#tiers:
+#  - title: "Base Pack"
+#    after: " (5 weapons)"
+#    cost: 0
+#  - title: "AK-47"
+#    after: " in PBR"
+#    cost: 5
+#  - title: "M4A1"
+#    after: " in high quality"
+#    cost: 10
 
 # Names of the screenshots
 screenshots:
