@@ -2,13 +2,8 @@
 
 {% assign img-path = site.asset-img-path | append: asset-name %}
 
-{% if page.download-path %}
-	{% assign download-path = page.download-path %}
-{% else %}
-	{% capture download-path %}{{site.github.url}}{{ site.asset-download-path }}{{ asset-name }}{{page.file-type}}{% endcapture %}
-{% endif %}
-
 {% include downloader.html %}
+{% include js/snipcart-helper-js.html %}
 
 <section class="pay-buttons" data-toggle="button">
 
@@ -37,19 +32,19 @@
 		Grab it for free!
 	</button>
 
-	<label class="btn btn-primary"><input type="radio" value="0" name="options" id="5" autocomplete="off" onclick="updatePayAmount(this.value)"><span>$0</span>
+	<label class="amount-button"><input type="radio" value="0" name="options" id="5" autocomplete="off" onclick="updatePayAmount(this.value)"><span>$0</span>
 	</label>
 
-	<label class="btn btn-primary"><input type="radio" value="20" name="options" id="4" autocomplete="off" onclick="updatePayAmount(this.value)"><span>$20</span>
+	<label class="amount-button"><input type="radio" value="20" name="options" id="4" autocomplete="off" onclick="updatePayAmount(this.value)"><span>$20</span>
 	</label>
 
-	<label class="btn btn-primary"><input type="radio" value="10" name="options" id="3" autocomplete="off" onclick="updatePayAmount(this.value)"><span>$10</span>
+	<label class="amount-button"><input type="radio" value="10" name="options" id="3" autocomplete="off" onclick="updatePayAmount(this.value)"><span>$10</span>
 	</label>
 
-	<label class="btn btn-primary active"><input type="radio" value="5" name="options" id="2" autocomplete="off" onclick="updatePayAmount(this.value)" checked><span>$5</span>
+	<label class="amount-button active"><input type="radio" value="5" name="options" id="2" autocomplete="off" onclick="updatePayAmount(this.value)" checked><span>$5</span>
 	</label>
 
-	<label class="btn btn-primary"><input type="radio" value="2" name="options" id="1" autocomplete="off" onclick="updatePayAmount(this.value)"><span>$2</span>
+	<label class="amount-button"><input type="radio" value="2" name="options" id="1" autocomplete="off" onclick="updatePayAmount(this.value)"><span>$2</span>
 	</label>
 
 </section>
@@ -58,8 +53,8 @@
 
 {% for tier in page.tiers %}
 
-	<div class="tier" data-cost="{{tier.cost}}">
-		<img src="http://127.0.0.1:4000/img/assets/medieval-arena/Screenshot03.jpg">
+	<div class="tier" data-cost="{{tier.cost}}" data-title="{{tier.title}}">
+		<img src="{{img-path}}/{{tier.img}}.jpg">
 		<div class="tier-cost">
 			<h3>UNLOCKED AT</h3>
 			<h1>${{tier.cost}}</h1>
@@ -73,92 +68,16 @@
 	
 </section>
 
-<script>
+<section>
+	<div class="message-box" id="msg-box-tier-1">
+		<p>WARNING: You will not recieve something! Add just $2 more to unlock!</p>
+		<a href="#" class="message-box-button" amount=2>Add $2</a>
+	</div>
 
-	$(function() {
-		updatePayAmount(5);
-	});
+	<div class="message-box" id="msg-box-tier-2">
+		<p>WARNING: You will not recieve something! Add just $2 more to unlock!</p>
+		<a href="#" class="message-box-button" amount=2>Add $2</a>
+	</div>
+</section>
 
-	$(".tier").click(function() {
-		var tierCost = $(this).attr("data-cost");
-
-		if (tierCost == 0)
-			updatePayAmount(2);
-		else
-			updatePayAmount(tierCost);
-	});
-
-	Snipcart.subscribe('cart.ready', function (data) {
-		Snipcart.api.cart.billingAddress({
-			"name": "",
-			"email": "",
-			"address1": " ",
-			"address2": " ",
-			"city": "",
-			"province": "",
-			"country": "",
-			"company": " ",
-			"postalCode": " "
-		})
-	});
-
-	function updatePayAmount(amount) {
-
-		var payButton = $('#pay-button');
-
-		var payButtonElement = document.getElementById( 'pay-button' );
-		var freeButtonElement = document.getElementById( 'pay-button-free' );
-
-		if (amount > 0) {
-			payButton.data('item-custom1-value', "$" + amount);
-
-			payButtonElement.style.display = 'block';
-			freeButtonElement.style.display = 'none';
-		} else {
-			payButtonElement.style.display = 'none';
-			freeButtonElement.style.display = 'block';
-		}
-
-		$('div.tier').each(function(i, obj) {
-
-			if (+amount >= +obj.dataset.cost) {
-				$(this).addClass("active");
-			} else {
-				$(this).removeClass("active");
-			}
-
-		});
-
-		$("input[name=options]").each(function(i, obj) {
-
-			var buttonAmount = $(this).attr("value");
-
-			if (buttonAmount == amount) {
-				$(this).prop("checked", true);
-			}
-
-		});
-
-	}
-
-	Snipcart.api.configure('allowed_provinces', [
-		{ country: 'US', provinces: [''] },
-		{ country: 'CA', provinces: [''] },
-	]);
-
-	Snipcart.execute('registerLocale', 'en', {
-    "my_cart": "Dev Assets",
-    "my_cart_content": "Selected Asset",
-    "billing_address": "About Me",
-    "confirm_order": "Confirm",
-    "payment_method_card_exp_month": "Expiration month",
-    "finalize": "Support Now",
-    "thankyou_message": "Thank you for supporting! Your invoice has been sent to you by email, you should receive it soon.",
-    "notifications_item_not_added_due_to_max_quantity": "You already have that item selected."
-	});
-
-	Snipcart.subscribe('order.completed', function (data) {
-		openDownloadModal();
-	});
-
-	</script>
+{% include js/pay-buttons-js.html %}

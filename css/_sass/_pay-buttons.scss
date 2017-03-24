@@ -1,3 +1,5 @@
+@import "message-box";
+
 .pay-buttons {
 	height: 45px;
 }
@@ -183,11 +185,12 @@
 
 			h3 {
 				font-weight: lighter;
-				text-shadow: none;
 
 				text-align: center;
 				vertical-align: middle;
 				line-height: 60px;
+
+				color: white;
 			}
 		}
 

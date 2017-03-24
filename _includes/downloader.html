@@ -1,5 +1,13 @@
 <link rel="stylesheet" type="text/css" href="{{site.github.url}}/css/download-modal.css">
 
+{% if page.external-download %}
+	{% assign download-path-short = site.external-download-path %}
+{% else %}
+	{% assign download-path-short = site.github.url | append: site.asset-download-path %}
+{% endif %}
+
+{% capture download-path %}{{download-path-short}}{{asset-name}}{{page.file-type}}{% endcapture %}
+
 <div class="download-modal hidden" id="download-modal">
 
 	<h1>Download</h1>
@@ -14,13 +22,28 @@
 </div>
 
 <script>
+var downloadPathShort = "{{download-path-short}}";
+var downloadFile = "{{asset-name}}";
+var downloadFileType = "{{page.file-type}}";
+var downloadPath = "{{download-path}}";
+
+var downloadIDs = [];
+{% for tier in page.tiers %}
+downloadIDs.push("{{tier.id}}");
+{% endfor %}
+
+function updateDownloadPath (newPath) {
+	downloadPath = newPath;
+	$("#pay-button").attr("data-item-custom2-value", newPath);
+}
+
 function openDownloadModal () {
 	$('#download-modal').removeClass("hidden");
 	$("#download-modal").fadeIn();
 }
 
 function Download () {
-	window.location.replace("{{download-path}}");
+	window.location.replace(downloadPath);
 
 	ga('send', {
 		hitType: 'event',

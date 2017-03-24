@@ -1,0 +1,99 @@
+<script>
+
+	$(function() {
+		updatePayAmount(5);
+	});
+
+	$(".tier").click(function() {
+		var tierCost = $(this).attr("data-cost");
+
+		if (tierCost == 0)
+			updatePayAmount(2);
+		else
+			updatePayAmount(tierCost);
+	});
+
+	function updatePayAmount(amount) {
+
+		var payButton = $('#pay-button');
+
+		var payButtonElement = document.getElementById( 'pay-button' );
+		var freeButtonElement = document.getElementById( 'pay-button-free' );
+
+		if (amount > 0) {
+			payButton.data('item-custom1-value', "$" + amount);
+
+			payButtonElement.style.display = 'block';
+			freeButtonElement.style.display = 'none';
+		} else {
+			payButtonElement.style.display = 'none';
+			freeButtonElement.style.display = 'block';
+		}
+
+		var tiers = {};
+
+		$('div.tier').each(function(i, obj) {
+
+			if (+amount >= +obj.dataset.cost) {
+				$(this).addClass("active");
+			} else {
+				$(this).removeClass("active");
+			}
+
+			tiers[obj.dataset.title] = +obj.dataset.cost;
+
+		});
+
+		var tierIndex = 0;
+
+		for (var title in tiers) {
+			if (tierIndex != 0) {
+				updateMessageBox(tierIndex, title, amount, tiers[title] - amount);
+
+				if (amount >= tiers[title]) {
+					var newPath = downloadPathShort + downloadFile + "-" + tierIndex  + "_" + downloadIDs[tierIndex] + downloadFileType;
+					updateDownloadPath(newPath);
+				}
+			} else {
+				var newPath = downloadPathShort + downloadFile + downloadFileType;
+				updateDownloadPath(newPath);
+			}
+
+			tierIndex++;
+		}
+
+		$("input[name=options]").each(function(i, obj) {
+
+			var buttonAmount = $(this).attr("value");
+
+			if (buttonAmount == amount) {
+				$(this).prop("checked", true);
+			}
+		});
+	}
+
+	$('.message-box-button').on("click", function(e){
+		var amount = $(this).attr("amount");
+		updatePayAmount(amount);
+
+		e.preventDefault();
+	});
+
+	function updateMessageBox (tier, title, amount, extra) {
+
+		var id = '#msg-box-tier-' + tier;
+		var tierCost = +amount + extra;
+
+		if (extra <= 0) {
+			$(id).hide();
+		} else {
+			$(id).show();
+		}
+
+		$(id).find("p").text("WARNING: You will not recieve the " + title + "! Add just $" + extra + " more to unlock!");
+
+		$(id).find("a").text("Add $" + extra);
+		$(id).find("a").attr("amount", tierCost);
+	}
+
+</script>

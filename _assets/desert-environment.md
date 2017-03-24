@@ -6,7 +6,24 @@ description: A highly detailed Desert Environment perfect for any FPS or third-p
 
 artist: Sam Troth
 
-download-path: http://brackeys.com/devassets/desert-environment.zip
+external-download: true
+
+#tiers:
+#  - title: "Base Pack"
+#    after: " (5 weapons)"
+#    cost: 0
+#    id: qnfunh
+#    img: "Screenshot01"
+#  - title: "AK-47"
+#    after: " in PBR"
+#    cost: 5
+#    id: qxllc3
+#    img: "Screenshot02"
+#  - title: "M4A1"
+#    after: " in high quality"
+#    cost: 10
+#    img: "Screenshot03"
+#    id: m1ak7j
 
 # List of assets in the pack
 assets:

@@ -1,0 +1,37 @@
+<script>
+
+	Snipcart.subscribe('cart.ready', function (data) {
+		Snipcart.api.cart.billingAddress({
+			"name": "",
+			"email": "",
+			"address1": " ",
+			"address2": " ",
+			"city": "",
+			"province": "",
+			"country": "",
+			"company": " ",
+			"postalCode": " "
+		})
+	});
+
+	Snipcart.api.configure('allowed_provinces', [
+		{ country: 'US', provinces: [''] },
+		{ country: 'CA', provinces: [''] },
+	]);
+
+	Snipcart.execute('registerLocale', 'en', {
+    "my_cart": "Dev Assets",
+    "my_cart_content": "Selected Asset",
+    "billing_address": "About Me",
+    "confirm_order": "Confirm",
+    "payment_method_card_exp_month": "Expiration month",
+    "finalize": "Support Now",
+    "thankyou_message": "Thank you for supporting! Your invoice has been sent to you by email, you should receive it soon.",
+    "notifications_item_not_added_due_to_max_quantity": "You already have that item selected."
+	});
+
+	Snipcart.subscribe('order.completed', function (data) {
+		openDownloadModal();
+	});
+
+</script>
