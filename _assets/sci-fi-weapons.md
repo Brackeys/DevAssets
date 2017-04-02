@@ -2,25 +2,38 @@
 # Name of the pack
 name: Sci-Fi Weapons
 
-description: Howdy partner! Here we have 10 premium PBR, western assets. A perfect choice for any rustic scene! By now, you could have already had them downloaded, and implemented within a matter of minutes. Enjoy!
+description: A total of 32 Sci-Fi Weapons in AAA quality. Four weapon types with 8 different texture variations!
+
+artist: Taylor Huff
+
+external-download: true
 
 show: false
 
-artist: Doug Allen
+tiers:
+  - title: "Base Textures"
+    after: ""
+    cost: 0
+    id: wum0tn
+    img: "Screenshot01"
+  - title: "Texture Variations"
+    after: " (3)"
+    cost: 2
+    id: w4srj9
+    img: "Screenshot02"
+  - title: "All Texture Variations"
+    after: " (8)"
+    cost: 5
+    img: "Screenshot03"
+    id: s7gqdp
 
 # List of assets in the pack
 assets:
-  - Chopped Wood Pile
-  - Closed Sack
-  - Coffee Sack
-  - Dynamite
-  - Milk Churn
-  - Pick Axe
-  - Whisky Bottle
-  - Wooden Barrel
-  - Wooden Bucket
-  - Wooden Crate
-  - Destructibles
+  - 8 Rifles
+  - 8 Snipers
+  - 8 Pistols
+  - 8 Heavy Weapons
+  - PBR Materials
   - Example Scene
 
 # Names of the screenshots
@@ -29,13 +42,11 @@ screenshots:
   - Screenshot02.jpg
   - Screenshot03.jpg
 
-video: "https://www.youtube.com/embed/a1bTMa_fj5Q"
-
-marmoset: Cannon.mview
+marmoset: Sci_Fi_Weapons.mview
 marmoset-thumbnail: Screenshot01.jpg
 
 ---
 
-**Howdy partner!** Here we have 10 premium PBR, western assets. A perfect choice for any rustic scene!
+A total of **32** Sci-Fi Weapons in **AAA quality**. Four weapon types with **8 different texture variations**!
 
-By now, you could have already had them downloaded, and implemented within a matter of minutes. Enjoy!
+Everything is **PBR** and ready to be used in your game!

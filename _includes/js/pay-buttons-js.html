@@ -51,7 +51,7 @@
 				updateMessageBox(tierIndex, title, amount, tiers[title] - amount);
 
 				if (amount >= tiers[title]) {
-					var newPath = downloadPathShort + downloadFile + "-" + tierIndex  + "_" + downloadIDs[tierIndex] + downloadFileType;
+					var newPath = downloadPathShort + downloadFile + "-" + tierIndex  + "-" + downloadIDs[tierIndex] + downloadFileType;
 					updateDownloadPath(newPath);
 				}
 			} else {
@@ -90,7 +90,7 @@
 			$(id).show();
 		}
 
-		$(id).find("p").text("WARNING: You will not recieve the " + title + "! Add just $" + extra + " more to unlock!");
+		$(id).find("p").text("WARNING: You will not recieve " + title + "! Add just $" + extra + " more to unlock!");
 
 		$(id).find("a").text("Add $" + extra);
 		$(id).find("a").attr("amount", tierCost);
