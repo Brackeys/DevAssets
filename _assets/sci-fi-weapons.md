@@ -15,16 +15,16 @@ tiers:
     after: ""
     cost: 0
     id: wum0tn
-    img: "Screenshot01"
+    img: "Tier01"
   - title: "Texture Variations"
     after: " (3)"
     cost: 2
     id: w4srj9
-    img: "Screenshot02"
+    img: "Tier02"
   - title: "All Texture Variations"
     after: " (8)"
     cost: 5
-    img: "Screenshot03"
+    img: "Tier03"
     id: s7gqdp
 
 # List of assets in the pack
