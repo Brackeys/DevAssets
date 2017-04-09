@@ -8,8 +8,6 @@ artist: Taylor Huff
 
 external-download: true
 
-show: false
-
 tiers:
   - title: "Base Textures"
     after: ""
