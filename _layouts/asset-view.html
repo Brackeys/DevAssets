@@ -56,16 +56,16 @@ style:
 	{% include artist-credit.html %}
 {% endif %}
 
-{% if page.marmoset %}
-	{% include marmoset-viewer.html viewer=page.marmoset thumbnail=page.marmoset-thumbnail %}
-{% endif %}
-
 {% if page.video %}
 	<section class="video">
 		<div class="videoWrapper">
 			<iframe width="560" height="315" src="{{page.video}}" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 		</div>
 	</section>
+{% endif %}
+
+{% if page.marmoset %}
+	{% include marmoset-viewer.html viewer=page.marmoset thumbnail=page.marmoset-thumbnail %}
 {% else %}
 	<div class="separator"></div>
 {% endif %}

@@ -43,6 +43,8 @@ screenshots:
 marmoset: Sci_Fi_Weapons.mview
 marmoset-thumbnail: Screenshot01.jpg
 
+video: https://www.youtube.com/embed/X3BVRd5u7AU
+
 ---
 
 A total of **32** Sci-Fi Weapons in **AAA quality**. Four weapon types with **8 different texture variations**!
