@@ -6,8 +6,6 @@ description: Bring your game to life with these AAA PBR materials! The pack feat
 
 artist: Mauricio Marinho
 
-show: false
-
 external-download: true
 
 # List of assets in the pack
