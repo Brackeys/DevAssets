@@ -28,6 +28,8 @@ screenshots:
   - Screenshot02.jpg
   - Screenshot03.jpg
 
+video: https://www.youtube.com/embed/HObt1uVKaos
+
 ---
 
 Bring your game to life with these **AAA PBR** materials! The pack features a collection of over 50 textures, including albedo, normal, metallic and height maps.
