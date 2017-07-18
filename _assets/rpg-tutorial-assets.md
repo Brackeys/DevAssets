@@ -9,8 +9,6 @@ is-for-course: true
 
 artist: Sebastian Lague
 
-show: false
-
 # List of assets in the pack
 assets:
   - Landscape
