@@ -11,6 +11,7 @@ artist: Sebastian Lague
 
 # List of assets in the pack
 assets:
+  - Player Character
   - Landscape
   - Trees
   - Rocks
@@ -30,8 +31,12 @@ screenshots:
   - Screenshot02.jpg
   - Screenshot03.jpg
 
+video: https://www.youtube.com/embed/nu5nyrB9U_o
+
 ---
 
 A **stylized low-poly environment** used in the RPG Tutorial series.
 
 All models are well optimized and can easily be used in mobile games as well.
+
+The pack also contains a **Player Character**.
