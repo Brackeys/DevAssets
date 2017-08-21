@@ -8,6 +8,8 @@ artist: BitGem
 
 external-download: true
 
+show: false
+
 tiers:
   - title: "20 Models"
     after: ""
