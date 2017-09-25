@@ -8,8 +8,6 @@ artist: Vincent & Raj
 
 external-download: true
 
-show: false
-
 tiers:
   - title: "Humvee & Stryker"
     after: ""
