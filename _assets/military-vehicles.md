@@ -2,7 +2,7 @@
 # Name of the pack
 name: Military Vehicles
 
-description: Get started on your new game quickly with this low poly, hand painted Mayan Temple set.
+description: Add some military muscle to your game with this mid-poly set of Modern Combat Vehicles.
 
 artist: Vincent & Raj
 
@@ -39,6 +39,8 @@ screenshots:
   - Screenshot01.jpg
   - Screenshot02.jpg
   - Screenshot03.jpg
+
+video: https://www.youtube.com/embed/BJ-bOs1Yhr0
 
 ---
 
