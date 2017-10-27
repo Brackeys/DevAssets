@@ -8,8 +8,6 @@ artist: Doug Allen
 
 external-download: true
 
-show: false
-
 tiers:
   - title: "Machete & Sickle"
     after: ""
