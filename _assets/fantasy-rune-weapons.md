@@ -8,8 +8,6 @@ artist: Pixel Make
 
 external-download: true
 
-show: false
-
 tiers:
   - title: "Hammer & Sword"
     after: ""
