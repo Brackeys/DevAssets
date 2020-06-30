@@ -19,7 +19,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Dev Assets allows you to pay what you want for full-featured asset packs.
   Textured, rigged, animated & optimized.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://devassets.com" # the base hostname & protocol for your site
+url: "https://devassets.com" # the base hostname & protocol for your site
 twitter_username: BrackeysTweet
 github_username:  Brackeys
 
@@ -30,7 +30,7 @@ asset-download-path: /downloads/assets/
 
 artist-img-path: /img/artists/
 
-external-download-path: http://downloads.brackeys.com/devassets/
+external-download-path: https://downloads.brackeys.com/devassets/
 
 #Snipcart
 snipcart-api-key: NjY3ZTgwNGQtNjM2Ni00YjUzLWExZGYtNjRjNGRlNzcxZmIwNjM2MTE0NTA4MDE5ODI4MDU5
