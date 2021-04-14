@@ -30,7 +30,7 @@ screenshots:
   - Screenshot02.jpg
   - Screenshot03.jpg
 
-video: "https://www.youtube.com/embed/videoseries?list=PLPV2KyIb3jR7F_B4p8X3YwHPaExh0R9Kk"
+video: "https://www.youtube.com/embed/fRED_-LvJKQ"
 
 ---
 
