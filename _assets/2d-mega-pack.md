@@ -25,7 +25,7 @@ screenshots:
   - Screenshot02.jpg
   - Screenshot03.jpg
 
-video: "https://www.youtube.com/embed/videoseries?list=PLPV2KyIb3jR42oVBU6K2DIL6Y22Ry9J1c"
+video: "https://www.youtube.com/embed/UbPiCgCkHTE"
 
 ---
 
